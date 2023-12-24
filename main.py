@@ -59,7 +59,6 @@ list_file_create('txt')
 
 
 # Запись в файл
-
 def file_res(txt):
     list_tuple = list(list_file_create(txt).items())
     print(list_tuple)
@@ -73,7 +72,6 @@ def file_res(txt):
             f_1.write(str(len(text_file)) + '\n')
             f_1.writelines(text_file)
             f_1.write('\n')
-
     return
 
 
