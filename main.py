@@ -47,6 +47,7 @@ pprint(get_shop_list_by_dishes(['Омлет', 'Запеченный картоф
 def list_file_create(txt):
     dict_file = {}
     list_file = os.listdir("txt")
+    print(list_file)
     for i in list_file:
         with open(txt + '\\' + i, 'r', encoding='utf-8') as f:
             file_1 = f.readlines()
@@ -61,6 +62,7 @@ list_file_create('txt')
 
 def file_res(txt):
     list_tuple = list(list_file_create(txt).items())
+    print(list_tuple)
     list_sorted = [i[0] for i in sorted(list_tuple, key=lambda items: items[1])]
     os.remove('write_file.txt')
     for name_file in list_sorted:
